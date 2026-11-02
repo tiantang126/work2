@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雪峰小提琴社｜2026春季招新官网</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif;}
+html{scroll-behavior:smooth;}
+body{background-color:#f8f9fa;color:#333;line-height:1.8;}
+
+/* 顶部导航栏 */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:linear-gradient(135deg,#2c3e50,#34495e);
+    color:#fff;
+    padding:14px 0;
+    z-index:999;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+}
+.nav-wrap{
+    width:85%;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+.logo i{color:#f39c12;}
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+/* ========== 强化音乐按钮样式，更显眼 ========== */
+#audioBtn{
+    background:#f39c12;
+    border:3px solid #fff;
+    color:#fff;
+    padding:9px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:16px;
+    font-weight:bold;
+    box-shadow: 0 0 12px #f39c12;
+}
+#audioBtn:hover{
+    background:#e67e22;
+    box-shadow: 0 0 20px #f39c12;
+    transform: scale(1.05);
+}
+.nav-link a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 10px;
+    transition:0.3s;
+    font-size:16px;
+}
+.nav-link a:hover{color:#f39c12;}
+
+/* 头部占位，避开fixed导航 */
+.space{height:72px;}
+
+/* 横幅banner */
+.banner{
+    background:linear-gradient(rgba(44,62,80,0.7),rgba(44,62,80,0.7)),url("https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=1400&q=80");
+    background-size:cover;
+    background-position:center;
+    height:360px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    text-align:center;
+}
+.banner h1{font-size:44px;margin-bottom:12px;letter-spacing:4px;}
+.banner p{font-size:18px;opacity:0.9;}
+
+/* 容器 */
+.container{width:85%;margin:0 auto;padding:60px 0;}
+section{
+    background:#fff;
+    border-radius:14px;
+    padding:36px;
+    margin-bottom:40px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.08);
+}
+section h2{
+    font-size:26px;
+    color:#2c3e50;
+    border-left:5px solid #f39c12;
+    padding-left:14px;
+    margin-bottom:20px;
+}
+section p{margin-bottom:16px;text-indent:2em;}
+.back-top{
+    display:inline-block;
+    margin-top:16px;
+    color:#34495e;
+    text-decoration:none;
+    font-size:15px;
+}
+.back-top:hover{color:#f39c12;}
+
+/* 表格样式 */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+th,td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+th{background-color:#2c3e50;color:#fff;font-weight:normal;}
+tr:nth-child(even){background-color:#f7f8f9;}
+
+/* 图片 */
+.img-box{margin:20px 0;}
+.img-box img{
+    max-width:650px;
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.img-box img:hover{transform:scale(1.01);}
+
+/* embed视频 */
+embed{
+    border-radius:10px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.1);
+    margin:10px 0;
+}
+
+/* 表单 */
+form table{width:100%;}
+form td{text-align:left;border:none;padding:10px 6px;vertical-align:top;}
+form td:first-child{width:140px;font-weight:bold;color:#2c3e50;}
+input[type="text"],select,textarea{
+    width:100%;
+    padding:8px 10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+textarea{resize:vertical;}
+.radio-group,.check-group{display:flex;gap:18px;flex-wrap:wrap;padding-top:6px;}
+.btn-group{display:flex;gap:14px;padding-top:10px;}
+input[type="submit"],input[type="reset"]{
+    padding:9px 24px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+}
+input[type="submit"]{background:#2c3e50;color:#fff;}
+input[type="reset"]{background:#bdc3c7;color:#222;}
+input[type="submit"]:hover{background:#34495e;}
+
+/* 页脚 */
+footer{
+    background:#2c3e50;
+    color:#fff;
+    text-align:center;
+    padding:24px 0;
+    font-size:14px;
+}
+</style>
+</head>
+<body id="top">
+<header>
+    <div class="nav-wrap">
+        <div class="logo">
+            <i class="fa-solid fa-violin"></i>
+            <span>雪峰小提琴社</span>
+        </div>
+        <div class="nav-right">
+            <button id="audioBtn"><i class="fa-solid fa-music"></i> 播放/暂停主题曲</button>
+            <div class="nav-link">
+                <a href="#intro">社团简介</a>
+                <a href="#plan">活动安排</a>
+                <a href="#show">风采展示</a>
+                <a href="#story">社员故事</a>
+                <a href="#form">在线报名</a>
+            </div>
+        </div>
+    </div>
+    <audio id="bgAudio" src="work2.mp3" loop style="display:none;">
+        你的浏览器不支持音频播放
+    
+</header>
+<div class="space"></div>
+
+<!-- Banner -->
+<div class="banner">
+    <h1>弦上遇知音 · 雪峰小提琴社招新</h1>
+    <p>以弓为笔，以弦为诗，期待每一份热爱奔赴而来</p>
+</div>
+
+<div class="container">
+    <!-- 1.社团简介 -->
+    <section id="intro">
+        <h2>社团简介</h2>
+        <p>小提琴社是我校面向全体在校学生设立的弦乐艺术类社团，社团致力于推广小提琴音乐文化，搭建合奏交流平台。无论你是零基础，从未接触过弦乐，还是具备一定演奏功底、想要寻找合奏伙伴，我们都敞开大门欢迎你的加入。社团不设门槛，不以演奏水平评判成员，我们相信音乐的内核是热爱，而非天赋与技巧。社团常态化开设乐理基础课、持弓运弓训练、音阶练习、分声部合奏排练等课程活动，同时定期举办古典音乐赏析沙龙、室内乐分享会、期末小型音乐会、跨社团联合音乐节等活动。</p>
+        <p>很多新成员初次入社时，连琴的握持方式都无法掌握，按弦紧张、音准飘忽，反复练习枯燥的音阶之后很容易产生挫败感。社团内部采用学长学姐一对一带练的帮扶模式，耐心拆解难点，纠正动作，陪伴大家度过入门最难的阶段。独奏的琴声单薄，合奏的旋律拥有力量，当数十把小提琴一同奏响，松香漫过琴房，所有学业带来的压力与焦虑，都可以在琴声之中慢慢消解。在这里你可以认识一群志同道合的伙伴，一起啃乐谱、一起打磨乐曲、一起站上舞台。我们希望让更多同学感受小提琴温柔又富有张力的魅力，让弦乐走进校园日常。</p>
+        <a href="#top" class="back-top"><i class="fa-solid fa-arrow-up"></i> 返回顶部</a>
+    </section>
+
+    <!-- 2.活动安排 -->
+    <section id="plan">
+        <h2>本学期主要活动安排</h2>
+        <table>
+            <tr>
+                <th colspan="4">小提琴社 2026 年春季学期活动安排表</th>
+            </tr>
+            <tr>
+                <th>活动名称</th>
+                <th>时间</th>
+                <th>地点</th>
+                <th>内容简介</th>
+            </tr>
+            <tr>
+                <td>新成员见面会</td>
+                <td>第2周周六晚19:00</td>
+                <td>艺术楼 A203</td>
+                <td>社团介绍、成员自我介绍、发放乐谱资料</td>
+            </tr>
+            <tr>
+                <td>小提琴基础教学公开课</td>
+                <td>第3周周六晚19:00</td>
+                <td>艺术楼 A203</td>
+                <td>持琴、运弓、五线谱识读入门教学</td>
+            </tr>
+            <tr>
+                <td>常规合奏排练</td>
+                <td>每周日下午14:30</td>
+                <td>艺术楼排练厅</td>
+                <td>分声部排练合奏曲目，打磨演奏细节</td>
+            </tr>
+            <tr>
+                <td>古典音乐赏析沙龙</td>
+                <td>第8周周五晚18:30</td>
+                <td>图书馆报告厅</td>
+                <td>小提琴名曲赏析，交流聆听感悟</td>
+            </tr>
+            <tr>
+                <td>期末汇报小型音乐会</td>
+                <td>第14周周六晚19:00</td>
+                <td>大学生活动中心</td>
+                <td>社员独奏、合奏节目集中展演</td>
+            </tr>
+        </table>
+        <a href="#top" class="back-top"><i class="fa-solid fa-arrow-up"></i> 返回顶部</a>
+    </section>
+
+    <!--3.风采展示 -->
+    <section id="show">
+        <h2>风采展示</h2>
+        <p>下面是社团日常合奏排练实拍，点击图片查看活动详情：</p>
+        <div class="img-box">
+            <a href="club_intro.html">
+                <img src="violin.jpg" alt="小提琴社合奏排练">
+            </a>
+        </div>
+        <p>社团活动短片：</p>
+        <embed src="show.mp4" width="650" height="366" autostart="false">
+        <a href="#top" class="back-top"><i class="fa-solid fa-arrow-up"></i> 返回顶部</a>
+    </section>
+
+    <!--4.社员故事 -->
+    <section id="story">
+        <h2>社员故事（节选）</h2>
+        <p>大一招新季，我漫无目的地走过一排社团摊位，直到一缕小提琴的旋律飘进耳朵，脚步不由自主停下。在此之前我没有任何乐器基础，看不懂五线谱，分不清琴弓正反，心里一直觉得，小提琴是天才才能触碰的乐器，普通人很难拉出好听的声音。我在摊位前徘徊许久，不敢报名，害怕自己跟不上节奏，害怕反复练习之后依旧只有刺耳噪音。社团的学长看出我的犹豫，主动把琴交到我手里，一点点教我把琴抵在肩窝，放松肩膀，平稳运弓。他说，没有人一开始就能拉出优美旋律，所有动人的曲子，都是从枯燥的空弦练习开始的。</p>
+        <p>入社之后，我才真正体会这句话。刚开始的一个多月，我的练习内容只有空弦，日复一日控制弓速、力度，肩膀常常酸痛僵硬，拉出的声音干涩难听，无数次练到情绪崩溃，想要放弃。但每次社团集体排练，身边的伙伴都会耐心等我，有人帮我调整手腕姿势，有人慢速陪我识谱，没有人嘲笑失误。慢慢的，我能稳住长音，能完整拉完音阶，之后慢慢接触简短小曲，最后融入合奏声部。当所有声部汇合，琴声在琴房里流淌的那一刻，长久练习积攒的疲惫一扫而空。</p>
+        <p>社团里有零基础慢慢起步的同伴，也有从小习琴的社员，大家彼此包容，合奏时谁节奏慢了，所有人都会放慢速度等候。我们会一起在黄昏琴房练琴，交换乐谱，相约去听音乐会，在学业压力繁重的时候，拉一小段曲子安抚情绪。期末音乐会，我站上舞台完成合奏，灯光柔和，松香在空气里淡淡浮动，我由衷庆幸当初鼓起勇气报名。如果你也向往小提琴的声音，请不要被零基础困住，只要你愿意拿起琴弓，愿意静下心练习，我们就在琴房等你，一起在琴弦之上，遇见属于自己的旋律。</p>
+        <a href="#top" class="back-top"><i class="fa-solid fa-arrow-up"></i> 返回顶部</a>
+    </section>
+
+    <!--5.在线报名表单 -->
+    <section id="form">
+        <h2>在线报名</h2>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td>姓名</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>性别</td>
+                    <td class="radio-group">
+                        <label><input type="radio" name="gender" value="男"> 男</label>
+                        <label><input type="radio" name="gender" value="女"> 女</label>
+                        <label><input type="radio" name="gender" value="其他"> 其他</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>出生日期</td>
+                    <td style="display:flex;gap:8px;">
+                        <input type="text" name="year" placeholder="年">
+                        <input type="text" name="month" placeholder="月">
+                        <input type="text" name="day" placeholder="日">
+                    </td>
+                </tr>
+                <tr>
+                    <td>手机号码</td>
+                    <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <td>邮箱</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>是否有小提琴基础</td>
+                    <td class="radio-group">
+                        <label><input type="radio" name="base" value="有"> 有</label>
+                        <label><input type="radio" name="base" value="无"> 无</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>兴趣方向（多选）</td>
+                    <td class="check-group">
+                        <label><input type="checkbox" name="interest" value="独奏"> 独奏</label>
+                        <label><input type="checkbox" name="interest" value="合奏"> 合奏</label>
+                        <label><input type="checkbox" name="interest" value="乐理"> 乐理学习</label>
+                        <label><input type="checkbox" name="interest" value="赏析"> 曲目赏析</label>
+                        <label><input type="checkbox" name="interest" value="演出"> 舞台演出</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>年级</td>
+                    <td>
+                        <select name="grade">
+                            <option value="大一">大一</option>
+                            <option value="大二">大二</option>
+                            <option value="大三">大三</option>
+                            <option value="大四">大四</option>
+                            <option value="研究生">研究生</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>自我介绍</td>
+                    <td><textarea name="intro" rows="5" placeholder="请简单介绍自己、以及加入小提琴社的理由……"></textarea></td>
+                </tr>
+                <tr>
+                    <td>是否服从活动安排</td>
+                    <td class="radio-group">
+                        <label><input type="radio" name="arrange" value="是"> 是</label>
+                        <label><input type="radio" name="arrange" value="否"> 否</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="btn-group">
+                        <input type="submit" value="提交报名">
+                        <input type="reset" value="清空重填">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <a href="#top" class="back-top"><i class="fa-solid fa-arrow-up"></i> 返回顶部</a>
+    </section>
+</div>
+
+<footer>
+    <p>小提琴社招新官网 | 2026春季招新 · 以琴会友，弦上拾光</p>
+</footer>
+
+<script>
+    const aud = document.getElementById("bgAudio");
+    const btn = document.getElementById("audioBtn");
+    btn.onclick = function(){
+        if(aud.paused) aud.play();
+        else aud.pause();
+    }
+</script>
+</body>
+</html>file:///C:/Users/Administrator/Desktop/violin.jpg
